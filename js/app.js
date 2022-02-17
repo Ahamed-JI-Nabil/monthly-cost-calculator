@@ -45,9 +45,9 @@ function savingCalculate() {
     const incomeBalance = getValues('income-balance');
     const savingPercent = getValues('saving-percent');
 
-    const savingAmmount = (savingPercent / 100) * incomeBalance;
+    const savingAmount = (savingPercent / 100) * incomeBalance;
 
-    document.getElementById('saving-ammount').innerText = savingAmmount;
+    document.getElementById('saving-amount').innerText = savingAmount;
 
     const remainingAmount = costCalculate() - savingAmount;
     if (remainingAmount < 0) {
