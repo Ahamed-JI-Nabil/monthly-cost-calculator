@@ -47,8 +47,18 @@ function costCalculate() {
 
     document.getElementById('total-expenses').innerText = totalCost;
     document.getElementById('balance').innerText = balance;
-    
 
+
+
+}
+
+function savingCalculate() {
+    
+    const savingPercentValue = parseFloat(document.getElementById('saving-percent').value);
+
+    const savingPercent = (savingPercentValue / 100) * incomeBalance;
+
+    console.log(savingPercent);
 
 }
 
