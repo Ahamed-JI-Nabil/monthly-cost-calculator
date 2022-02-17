@@ -7,10 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- tailwind cnd  -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- style -->
+    <style>
+        .notify {
+            display: none;
+        }
+    </style>
     <title>Monthly Cost Calculator</title>
 </head>
 
 <body>
+    <!-- header section -->
     <header>
         <h1 class="text-5xl font-bold text-cyan-700 text-center mt-4">Monthly Cost Calculator</h1cls>
     </header>
@@ -20,6 +27,10 @@
                 <img src="images/money.jpg" class="rounded-lg" alt="" srcset="">
             </div>
             <div class="grid content-center">
+                <p id="negative-value" class="notify text-1xl font-semibold text-center">❌Sorry! Negative input value
+                    isn't allowed❌</p>
+                <p id="spend-more-then-earn" class="notify text-1xl font-semibold text-center">❌ You can't spend more
+                    then you'r earn!❌</p>
                 <form class="w-full max-w-sm">
                     <h3 class="text-2xl font-semibold text-center mb-4">Income</h3>
                     <div class="md:flex md:items-center mb-4">
@@ -74,18 +85,19 @@
                     <div class="md:flex md:items-center">
                         <div class="md:w-1/3"></div>
                         <div class="md:w-2/3">
-                            <button onclick="costCalculate()" class="shadow bg-cyan-700 hover:bg-cyan-500  text-white font-bold py-2 px-4 rounded"
+                            <button onclick="costCalculate()"
+                                class="shadow bg-cyan-700 hover:bg-cyan-500  text-white font-bold py-2 px-4 rounded"
                                 type="button">
                                 Calculate
                             </button>
-                            <button class="shadow bg-cyan-700 hover:bg-cyan-500  text-white font-bold py-2 px-4 rounded ml-12"
-                                type="button">
-                                Reset 
-                            </button>
                         </div>
                     </div>
-                    <h3 class="text-lg font-bold text-center mt-4">Total Expenses: <span id="total-expenses">00</span></h3>
+                    <h3 class="text-lg font-bold text-center mt-4">Total Expenses: <span id="total-expenses">00</span>
+                    </h3>
                     <h3 class="text-lg font-bold text-center mt-4">Balance: <span id="balance">00</span></h3>
+                    <p id="save-more-then-remaining" class="notify text-1xl font-semibold text-center">❌ You can't save
+                        more then
+                        you'r earn ❌</p>
                     <div class="mt-8 flex">
                         <div class="md:flex md:items-center">
                             <div class="md:w-2/3">
@@ -114,8 +126,10 @@
                         </div>
                     </div>
                     <div class="mt-8">
-                        <h3 class="text-lg font-bold text-center mt-4">Saving Ammount: <span id="saving-ammount">00</span></h3>
-                        <h3 class="text-lg font-bold text-center mt-4">Remaining Balance: <span id="remaining-ammount">00</span></h3>
+                        <h3 class="text-lg font-bold text-center mt-4">Saving Amount: <span
+                                id="saving-amount">00</span></h3>
+                        <h3 class="text-lg font-bold text-center mt-4">Remaining Balance: <span
+                                id="remaining-amount">00</span></h3>
                     </div>
                 </form>
             </div>
